@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrailerSpotlight from "@/components/TrailerSpotlight";
 import CoreLoop from "@/components/CoreLoop";
 import RegionsExplorer from "@/components/RegionsExplorer";
 import CombatArsenal from "@/components/CombatArsenal";
 import GameSystems from "@/components/GameSystems";
 import LoreSection from "@/components/LoreSection";
+import AboutStudio from "@/components/AboutStudio";
 import PitchDeckCTA from "@/components/PitchDeckCTA";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
@@ -18,8 +20,8 @@ export default function Home() {
   const [isBetaModalOpen, setIsBetaModalOpen] = useState(false);
   const [isTrailerModalOpen, setIsTrailerModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState({
-    src: "/videos/hero.mp4",
-    title: "Ceylon Checkmate: In-Engine Combat Showcase",
+    src: "/videos/trailer.mp4",
+    title: "Ceylon Checkmate: Official Reveal Trailer",
   });
 
   const handleOpenVideoWithSource = (videoSrc: string, title: string) => {
@@ -34,24 +36,27 @@ export default function Home() {
         onOpenBetaModal={() => setIsBetaModalOpen(true)}
         onOpenTrailerModal={() => {
           setSelectedVideo({
-            src: "/videos/hero.mp4",
-            title: "Ceylon Checkmate: In-Engine Combat Showcase",
+            src: "/videos/trailer.mp4",
+            title: "Ceylon Checkmate: Official Reveal Trailer",
           });
           setIsTrailerModalOpen(true);
         }}
       />
 
-      {/* Hero Section with Looping Palace Video */}
+      {/* Hero Section with Looping Hero Combat Video */}
       <Hero
         onOpenBetaModal={() => setIsBetaModalOpen(true)}
         onOpenTrailerModal={() => {
           setSelectedVideo({
-            src: "/videos/hero.mp4",
-            title: "Ceylon Checkmate: In-Engine Combat Showcase",
+            src: "/videos/trailer.mp4",
+            title: "Ceylon Checkmate: Official Reveal Trailer",
           });
           setIsTrailerModalOpen(true);
         }}
       />
+
+      {/* Official Cinematic Trailer, Full Gameplay & Visual Key Art */}
+      <TrailerSpotlight onPlayTrailer={handleOpenVideoWithSource} />
 
       {/* The Core Survival Loop (Chess -> Weapon -> Combat -> Chip -> Galland) */}
       <CoreLoop />
@@ -67,6 +72,9 @@ export default function Home() {
 
       {/* Lore, Dystopian Chronology & Clone Mirror Duel */}
       <LoreSection />
+
+      {/* About Us - Dark Pixel Studios Team & Core Expertise */}
+      <AboutStudio />
 
       {/* Pitch Deck, Market Sizing & Whitepaper Download */}
       <PitchDeckCTA />

@@ -23,11 +23,12 @@ export default function Navbar({ onOpenBetaModal, onOpenTrailerModal }: NavbarPr
 
   const navLinks = [
     { name: "Overview", href: "#overview" },
+    { name: "Trailer", href: "#trailer" },
     { name: "The Core Loop", href: "#core-loop" },
     { name: "5 Regions", href: "#regions" },
     { name: "Arsenal", href: "#arsenal" },
     { name: "Systems", href: "#systems" },
-    { name: "Lore", href: "#lore" },
+    { name: "About Us", href: "#about" },
     { name: "FAQ", href: "#faq" },
   ];
 

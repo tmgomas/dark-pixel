@@ -92,6 +92,9 @@ export default function Footer() {
                 <a href="#overview" className="hover:text-cyan-400 transition-colors">Overview</a>
               </li>
               <li>
+                <a href="#trailer" className="hover:text-cyan-400 transition-colors">Trailer & Gameplay</a>
+              </li>
+              <li>
                 <a href="#core-loop" className="hover:text-cyan-400 transition-colors">The Core Loop</a>
               </li>
               <li>
@@ -104,7 +107,7 @@ export default function Footer() {
                 <a href="#systems" className="hover:text-cyan-400 transition-colors">Game Systems</a>
               </li>
               <li>
-                <a href="#lore" className="hover:text-cyan-400 transition-colors">Classified Lore</a>
+                <a href="#about" className="hover:text-cyan-400 transition-colors">About Us</a>
               </li>
             </ul>
           </div>

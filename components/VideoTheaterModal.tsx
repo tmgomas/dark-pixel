@@ -48,9 +48,19 @@ export default function VideoTheaterModal({
 
   const playlist = [
     {
-      src: "/videos/hero_palace.mp4",
-      title: "Ochre Palace & Golden Chess Pavilion",
-      region: "Ochre Exploration",
+      src: "/videos/trailer.mp4",
+      title: "Official Cinematic Trailer",
+      region: "Official Trailer",
+    },
+    {
+      src: "/videos/gameplay.mp4",
+      title: "Extended Gameplay & Combat Walkthrough",
+      region: "Full Gameplay",
+    },
+    {
+      src: "/videos/hero.mp4",
+      title: "Permafrost Tundra: Cryo Hammer Combat",
+      region: "Fathom Combat",
     },
     {
       src: "/videos/combat_aegis.mp4",
@@ -63,9 +73,9 @@ export default function VideoTheaterModal({
       region: "Ochre Combat",
     },
     {
-      src: "/videos/combat_fathom.mp4",
-      title: "Permafrost Tundra: Cryo Hammer vs Freeze Status Mechs",
-      region: "Fathom Combat",
+      src: "/videos/hero_palace.mp4",
+      title: "Ochre Palace & Golden Chess Pavilion",
+      region: "Ochre Exploration",
     },
     {
       src: "/videos/chip_pickup.mp4",
@@ -130,10 +140,10 @@ export default function VideoTheaterModal({
             <span className="text-xs font-mono uppercase tracking-widest text-slate-400">
               Select Gameplay Feed
             </span>
-            <span className="text-[11px] font-mono text-cyan-400">5 REEL CHANNELS AVAILABLE</span>
+            <span className="text-[11px] font-mono text-cyan-400">7 REEL CHANNELS AVAILABLE</span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
             {playlist.map((item, idx) => {
               const isSelected = currentVideo === item.src;
               return (
